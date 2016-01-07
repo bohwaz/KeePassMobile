@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+
+  <head>
+		<base href="http://keepassmobile.com/" />
+		<title>News &raquo; KeePassMobile - Mobile Password Management Software</title>
+		<meta name="generator" http-equiv="generator" content="SilverStripe 2.3.1 - http://www.silverstripe.com" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" http-equiv="keywords" content="keepassmobile, keepass, mobile, password, manager, software, free, open, source, opensource" />
+<meta name="description" http-equiv="description" content="KeePassMobile is a free, open source password manager software for mobile phones, that stores passwords in a highly-encrypted database" />
+<meta http-equiv="Content-Language" content="en"/>
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		 
+		 
+		 
+		
+		<!--[if IE 6]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie6.css);
+			</style> 
+		<![endif]-->
+		
+		<!--[if IE 7]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie7.css);
+			</style> 
+		<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.5.0/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+	<link rel="stylesheet" type="text/css" href="http://keepassmobile.com/themes/blackcandy/css/layout.css?m=1247729689" />
+<link rel="stylesheet" type="text/css" href="http://keepassmobile.com/themes/blackcandy/css/typography.css?m=1241954114" />
+<link rel="stylesheet" type="text/css" href="http://keepassmobile.com/themes/blackcandy/css/form.css?m=1241954113" />
+<link rel="stylesheet" type="text/css" href="http://keepassmobile.com/themes/blackcandy_blog/css/blog.css?m=1241954120" />
+<link rel="stylesheet" type="text/css" href="http://keepassmobile.com/themes/blackcandy_blog/css/bbcodehelp.css?m=1241954120" />
+<link rel="alternate" type="application/rss+xml" title="RSS feed of this blog" href="/news/rss" />
+</head>
+<body><script type="text/javascript" src="http://keepassmobile.com/jsparty/prototype.js?m=1241953734"></script><script type="text/javascript" src="http://keepassmobile.com/jsparty/behaviour.js?m=1241953732"></script><script type="text/javascript" src="http://keepassmobile.com/jsparty/prototype_improvements.js?m=1241953736"></script><script type="text/javascript" src="http://keepassmobile.com/sapphire/javascript/i18n.js?m=1241953914"></script><script type="text/javascript" src="http://keepassmobile.com/sapphire/javascript/lang/en_US.js?m=1241954081"></script><script type="text/javascript" src="http://keepassmobile.com/sapphire/javascript/Validator.js?m=1241953917"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script>
+<div id="BgContainer">
+	<div id="Container">
+		<div id="Header">
+			<form id="SearchForm_SearchForm" action="/news/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="Search" /></div></div>
+		
+		
+			<input class="action" id="SearchForm_SearchForm_action_results" type="submit" name="action_results" value="Search" title="Search" />
+		
+	</fieldset>
+</form>
+
+	   		<h1>KeePassMobile</h1>
+	    	<p>Secure Password Management On The Go!</p>
+		</div>
+		
+		<div id="Navigation">
+			<ul>
+ 		  
+  		<li><a href="/" title="Go to the Home page" class="link"><span>Home</span></a></li>
+   		  
+  		<li><a href="/news/" title="Go to the News page" class="current"><span>News</span></a></li>
+   		  
+  		<li><a href="/download/" title="Go to the Download page" class="link"><span>Download</span></a></li>
+   		  
+  		<li><a href="/faq/" title="Go to the FAQ page" class="link"><span>FAQ</span></a></li>
+   		  
+  		<li><a href="/translations/" title="Go to the Translations page" class="link"><span>Translations</span></a></li>
+   		  
+  		<li><a href="/forums/" title="Go to the Support page" class="link"><span>Support</span></a></li>
+   		  
+  		<li><a href="/donate/" title="Go to the Donate page" class="link"><span>Donate</span></a></li>
+   	
+ </ul>
+	  	</div>
+	  	
+	  	<div class="clear"><!-- --></div>
+		
+		<div id="Layout">
+		  <div id="BlogContent" class="blogcontent typography">
+	
+	
+	
+	
+		<h3>Viewing entries tagged with 'V0.6'</h3>
+	
+	
+	
+		
+				<div class="blogSummary">
+	<h2><a href="/version-v0-6-released/" title="View full post titled - 'Version V0.6 released'">Version V0.6 released</a></h2>
+	<p class="authorDate">Posted by Christoph on 24 June 2009 | <a href="/version-v0-6-released/#PageComments_holder" title="View Comments Posted">15 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="/news/tag/release" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="/news/tag/V0.6" title="View all posts tagged 'V0.6'" rel="tag">V0.6</a>
+			
+		</p>
+	
+	<p>After some delays, the version V0.6 of KeePassMobile was released  today. Thanks to all testers, that helped me making KeePassMobile a  stable and useful application (alphabetic order): Bill, Francoise, Glyn,  Michael, Ricardo, Roman, Tirta, Wietse. Thanks a lot!</p>
+	<p class="blogVitals"><a href="/version-v0-6-released/#PageComments_holder" class="comments" title="View Comments for this post">15 comments</a> | <a href="/version-v0-6-released/" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="/status-update-v0-6/" title="View full post titled - 'Status update V0.6 (and a little bit about me)'">Status update V0.6 (and a little bit about me)</a></h2>
+	<p class="authorDate">Posted by Christoph on 17 June 2009 | <a href="/status-update-v0-6/#PageComments_holder" title="View Comments Posted">3 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="/news/tag/release" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="/news/tag/V0.6" title="View all posts tagged 'V0.6'" rel="tag">V0.6</a>,
+			
+				<a href="/news/tag/aboutme" title="View all posts tagged 'aboutme'" rel="tag">aboutme</a>
+			
+		</p>
+	
+	<p>I am very busy at the moment: Besides my job as software engineer at <a href="http://www.pulinco.com/" target="_blank">pulinco</a> I work as lecturer at the <a href="http://www.dhbw-loerrach.de/" target="_blank">Baden-W&uuml;rttemberg Cooperative State University in L&ouml;rrach</a> for software engineering (what else!? ;-) This is the reason why I can  not concentrate on KeePassMobile at the moment than I used to.</p>
+	<p class="blogVitals"><a href="/status-update-v0-6/#PageComments_holder" class="comments" title="View Comments for this post">3 comments</a> | <a href="/status-update-v0-6/" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="/version-v0-6-on-the-horizon/" title="View full post titled - 'Version V0.6 on the horizon'">Version V0.6 on the horizon</a></h2>
+	<p class="authorDate">Posted by Christoph on 15 May 2009 | <a href="/version-v0-6-on-the-horizon/#PageComments_holder" title="View Comments Posted">2 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="/news/tag/release" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="/news/tag/V0.6" title="View all posts tagged 'V0.6'" rel="tag">V0.6</a>,
+			
+				<a href="/news/tag/testers" title="View all posts tagged 'testers'" rel="tag">testers</a>
+			
+		</p>
+	
+	<p>I am very busy working on the upcoming release V0.6. And there will be some very cool features in it:</p>
+	<p class="blogVitals"><a href="/version-v0-6-on-the-horizon/#PageComments_holder" class="comments" title="View Comments for this post">2 comments</a> | <a href="/version-v0-6-on-the-horizon/" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="/translators-welcome/" title="View full post titled - 'Translators Welcome'">Translators Welcome</a></h2>
+	<p class="authorDate">Posted by Christoph on 2 May 2009 | <a href="/translators-welcome/#PageComments_holder" title="View Comments Posted">0 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="/news/tag/translation" title="View all posts tagged 'translation'" rel="tag">translation</a>,
+			
+				<a href="/news/tag/V0.6" title="View all posts tagged 'V0.6'" rel="tag">V0.6</a>
+			
+		</p>
+	
+	<p>KeePassMobile V0.5 supports two languages at the moment: English and  German. Both languages are maintained by me. As you can see in the <a href="http://192.168.149.129/keepassmobile/index.php/release-plan-v1-0/">release plan</a>, I want to add more translations to KeePassMobile V0.6.</p>
+	<p class="blogVitals"><a href="/translators-welcome/#PageComments_holder" class="comments" title="View Comments for this post">0 comments</a> | <a href="/translators-welcome/" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="/release-plan-v1-0/" title="View full post titled - 'Release Plan V1.0'">Release Plan V1.0</a></h2>
+	<p class="authorDate">Posted by Christoph on 24 April 2009 | <a href="/release-plan-v1-0/#PageComments_holder" title="View Comments Posted">11 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="/news/tag/releaseplan" title="View all posts tagged 'releaseplan'" rel="tag">releaseplan</a>,
+			
+				<a href="/news/tag/V0.6" title="View all posts tagged 'V0.6'" rel="tag">V0.6</a>,
+			
+				<a href="/news/tag/V0.8" title="View all posts tagged 'V0.8'" rel="tag">V0.8</a>,
+			
+				<a href="/news/tag/V1.0" title="View all posts tagged 'V1.0'" rel="tag">V1.0</a>
+			
+		</p>
+	
+	<p>Here is the preliminary release plan for the way to KeePassMobile V1.0:</p>
+	<p class="blogVitals"><a href="/release-plan-v1-0/#PageComments_holder" class="comments" title="View Comments for this post">11 comments</a> | <a href="/release-plan-v1-0/" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+	
+	
+	
+	
+</div>
+
+		</div>
+		
+	   <div class="clear"><!-- --></div>
+	</div>
+	<div id="Footer">
+		<div class="footerTop">
+	<!-- -->
+</div>
+<p>KeePassMobile Copyright &copy; 2010 | <a href="imprint" title="Imprint">Imprint</a> | <a href="contact" title="Contact">Contact</a> | <a href="donate" title="Donate">Donate</a></p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1424031-4");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</div> 
+</div>
+
+</body>
+</html>

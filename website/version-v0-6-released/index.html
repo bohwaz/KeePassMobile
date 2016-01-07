@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+
+  <head>
+		<base href="" />
+		<title>Version V0.6 released &raquo; KeePassMobile - Mobile Password Management Software</title>
+		<meta name="generator" http-equiv="generator" content="SilverStripe 2.3.1 - http://www.silverstripe.com" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en"/>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/" xmlns:dc="http://purl.org/dc/elements/1.1/" >
+	<rdf:Description rdf:about="/version-v0-6-released/" trackback:ping="/version-v0-6-released/trackbackping" dc:identifier="/version-v0-6-released/" dc:title="Version V0.6 released" />
+</rdf:RDF>
+
+		<link rel="shortcut icon" href="../favicon.ico" />
+		
+		 
+		 
+		 
+		
+		<!--[if IE 6]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie6.css);
+			</style> 
+		<![endif]-->
+		
+		<!--[if IE 7]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie7.css);
+			</style> 
+		<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.5.0/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+	<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/layout.css%3Fm=1247729689.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/typography.css%3Fm=1241954114.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/form.css%3Fm=1241954113.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy_blog/css/blog.css%3Fm=1241954120.css" />
+</head>
+<body><script type="text/javascript" src="../jsparty/prototype.js%3Fm=1241953734"></script><script type="text/javascript" src="../jsparty/behaviour.js%3Fm=1241953732"></script><script type="text/javascript" src="../jsparty/prototype_improvements.js%3Fm=1241953736"></script><script type="text/javascript" src="../sapphire/javascript/i18n.js%3Fm=1241953914"></script><script type="text/javascript" src="../sapphire/javascript/lang/en_US.js%3Fm=1241954081"></script><script type="text/javascript" src="../sapphire/javascript/Validator.js%3Fm=1241953917"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#PageCommentInterface_Form_PostCommentForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#PageCommentInterface_Form_PostCommentForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('PageCommentInterface_Form_PostCommentForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#PageCommentInterface_Form_PostCommentForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('PageCommentInterface_Form_PostCommentForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script>
+<div id="BgContainer">
+	<div id="Container">
+		<div id="Header">
+			<form id="SearchForm_SearchForm" action="http://localhost:8080/version-v0-6-released/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="Search" /></div></div>
+		
+		
+			<input class="action" id="SearchForm_SearchForm_action_results" type="submit" name="action_results" value="Search" title="Search" />
+		
+	</fieldset>
+</form>
+
+	   		<h1>KeePassMobile</h1>
+	    	<p>Secure Password Management On The Go!</p>
+		</div>
+		
+		<div id="Navigation">
+			<ul>
+ 		  
+  		<li><a href="../index.html" title="Go to the Home page" class="link"><span>Home</span></a></li>
+   		  
+  		<li><a href="../news/index.html" title="Go to the News page" class="section"><span>News</span></a></li>
+   		  
+  		<li><a href="../download/index.html" title="Go to the Download page" class="link"><span>Download</span></a></li>
+   		  
+  		<li><a href="../faq/index.html" title="Go to the FAQ page" class="link"><span>FAQ</span></a></li>
+   		  
+  		<li><a href="../translations/index.html" title="Go to the Translations page" class="link"><span>Translations</span></a></li>
+   		  
+  		<li><a href="../forums/index.html" title="Go to the Support page" class="link"><span>Support</span></a></li>
+   		  
+  		<li><a href="../donate/index.html" title="Go to the Donate page" class="link"><span>Donate</span></a></li>
+   	
+ </ul>
+	  	</div>
+	  	
+	  	<div class="clear"><!-- --></div>
+		
+		<div id="Layout">
+		  <!-- % include BlogSideBar % -->
+<div id="BlogContent" class="typography">
+	
+	<div id="Breadcrumbs">
+	   	<p><a href="../news/index.html">News</a> &raquo; Version V0.6 released</p>
+	</div>
+
+	
+	<div class="blogEntry">
+		<h2>Version V0.6 released</h2>
+		<p class="authorDate">Posted by Christoph on 24 June 2009 | 15 Comments</p>
+		
+			<p class="tags">
+				 Tags: 
+				
+					<a href="../news/tag/release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+				
+					<a href="../news/tag/V0.6" title="View all posts tagged 'V0.6'" rel="tag">V0.6</a>
+				
+			</p>
+		
+		
+			<p>After some delays, the version V0.6 of KeePassMobile was released  today. Thanks to all testers, that helped me making KeePassMobile a  stable and useful application (alphabetic order): Bill, Francoise, Glyn,  Michael, Ricardo, Roman, Tirta, Wietse. Thanks a lot!</p>
+<h5>Release Notes</h5>
+<p>Here are the changes of this release in detail:</p>
+<h6>New features</h6>
+<ul>
+<li>Keyfile decryption support: Databases that are encrypted using a keyfile (and password) can now be handled by KeePassMobile</li>
+<li>Attachment support: Attachments that belong to a password entry can now be saved to the mobile memory</li>
+<li>Multi-Language Support: available in 9 different languages. The  following languages are supported with V0.6: Danish, Dutch, English,  German, Italian, Russian, Spanish, Swedish and Ukrainian. Many thanks to  all the translators: Carl, Evgeniy, Giulia, Peter, Ricardo, Roman,  Wietse. If your language is not supported: new translators are welcome!  Write a mail to <a href="mailto:contact@keepassmobile.com">contact@keepassmobile.com</a></li>
+<li>User preferences: Preferences to set preferred language, date format, ...</li>
+<li>Watchdog: The database will be closed automatically, after a certain  time, the mobile has not been used. The timeout can be set in the  preferences.</li>
+<li>Search options: The database search can be controlled setting search options.</li>
+<li>Statistics: KeePassMobile shows some statistics from the decryption  process of a database. If you have any performance issues, this can help  to identify the cause. Also there is a value "performance rating" that  can be used to compare the decryption performance of your mobile to  other mobiles. Please leave a note in the KeePassMobile "performance  rating" forum.</li>
+</ul>
+<h6>Improvements</h6>
+<ul>
+<li>Performance: The performance of the decryption process has been  increased. On some mobiles (Nokia S60 devices) the decryption of a  database is now many times faster.</li>
+<li>On some mobiles the UI can cause problems. It is now possible to switch to a much simpler UI theme.</li>
+<li>Entries that have been expired are flagged with a red cross, so that they can be spotted immediately.</li>
+<li>The progress bar showing up during database decryption is now much more precise.</li>
+<li>During search, a progress bar shows the progress of the search.</li>
+<li>It is now possible to navigate from anywhere within the password groups back to the top.</li>
+</ul>
+<h6>Bug fixes</h6>
+<ul>
+<li>Databases imported from eWallet are now handled correctly.</li>
+</ul>
+		
+		<br />
+	</div>
+	
+	
+	
+	
+	<div id="PageComments_holder" class="typography">
+	
+		<h4>Post your comment</h4>
+		
+		
+<form id="PageCommentInterface_Form_PostCommentForm" action="http://localhost:8080/version-v0-6-released/PageComments/PostCommentForm" method="post" enctype="application/x-www-form-urlencoded">
+
+	
+	<p id="PageCommentInterface_Form_PostCommentForm_error" class="message " style="display: none"></p>
+	
+	
+	<fieldset>
+		<legend></legend>
+		
+			<input class="hidden" type="hidden" id="PageCommentInterface_Form_PostCommentForm_ParentID" name="ParentID" value="32" />
+		
+			<div id="Name" class="field text "><label class="left" for="PageCommentInterface_Form_PostCommentForm_Name">Your name</label><div class="middleColumn"><input type="text" class="text" id="PageCommentInterface_Form_PostCommentForm_Name" name="Name" value="" /></div></div>
+		
+			<div id="CommenterURL" class="field text "><label class="left" for="PageCommentInterface_Form_PostCommentForm_CommenterURL">Your website URL</label><div class="middleColumn"><input type="text" class="text" id="PageCommentInterface_Form_PostCommentForm_CommenterURL" name="CommenterURL" value="" /></div></div>
+		
+			<div id="Comment" class="field textarea "><label class="left" for="PageCommentInterface_Form_PostCommentForm_Comment">Comments</label><div class="middleColumn"><textarea id="PageCommentInterface_Form_PostCommentForm_Comment" name="Comment" rows="5" cols="20"></textarea></div></div>
+		
+			<input class="hidden" type="hidden" id="PageCommentInterface_Form_PostCommentForm_SecurityID" name="SecurityID" value="1666553880" />
+		
+			
+		
+		<div class="clear"><!-- --></div>
+	</fieldset>
+
+	
+	<div class="Actions">
+		
+			<input class="action" id="PageCommentInterface_Form_PostCommentForm_action_postcomment" type="submit" name="action_postcomment" value="Post" title="Post" />
+		
+	</div>
+	
+
+</form>
+
+
+	
+	
+	<h4>Comments</h4>
+	
+	<div id="CommentHolder">
+		
+			<ul id="PageComments">
+				
+					<li class="odd first  notspam">
+						<p class="comment" id="PageComment_434">
+	
+		Hello Antoine<br /><br />can you please anonymize your database and send it to me (contact@keepassmobile.com). Then I can analyze and hopefully fix your problem.<br /><br />Regards<br />Christoph<br />	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Christoph, 04/12/2009 8:50am (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even notspam">
+						<p class="comment" id="PageComment_433">
+	
+		Hello Marty<br /><br />yes, KeePassMobile V0.6 is slow on some mobiles. Please install V0.8, where I have improved the performance. Does V0.8 solve your performance problem?<br /><br />Regards<br />Christoph<br />	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Christoph, 04/12/2009 8:48am (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="odd notspam">
+						<p class="comment" id="PageComment_432">
+	
+		"An internal application error occured:java.lang.NullPointer exception: 0"<br />This the message i receive after décription/validation.<br />Phone is Samsung GT 5230	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by <a href="http://a.castano@voila.fr">Antoine</a>, 03/12/2009 9:41am (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even notspam">
+						<p class="comment" id="PageComment_425">
+	
+		It is really really slow on my E71, so slow that it is unusable	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Marty, 29/11/2009 5:22pm (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="odd notspam">
+						<p class="comment" id="PageComment_412">
+	
+		I got the following message:<br />Error choosing file. The error message is: Application not authorized to access the restricted API.  I just installed Keepassmobile on my new Samsung SGH-T746... Any clues?<br /><br />zadig56@hotmail.com	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Martial Van Neste, 18/11/2009 6:22pm (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even notspam">
+						<p class="comment" id="PageComment_407">
+	
+		Now totally happy. Fallback ;-) to KeePassJ2ME gives me full performance also on my Nokia E51 :-)	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Wolfgang, 16/11/2009 4:57pm (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="odd notspam">
+						<p class="comment" id="PageComment_406">
+	
+		Glad that I have found my KeePass to go ;-)<br />but v0.6 is real slow on my Nokia E51 (S603rd) also with "fast" theme.	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Wolfgang, 16/11/2009 4:39pm (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even notspam">
+						<p class="comment" id="PageComment_335">
+	
+		Hi, now Version 0.6 works very faster with the decryption on my Nokia E66 than Version 0.5. Only the switch from main group to sub-group works a little bit slowly.<br />But result is: good work. I delete now KeePassJ2ME.<br />Christian	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Christian, 11/08/2009 5:30pm (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="odd notspam">
+						<p class="comment" id="PageComment_317">
+	
+		I use Nokia 5800 XpressMusic. A problem: it is not possible to use the clipboard and if a key is long.....	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by framuel, 12/07/2009 7:16pm (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even last  notspam">
+						<p class="comment" id="PageComment_316">
+	
+		Works much better on 5310 with the "fast" theme.<br />Thanks much	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Zaphod, 04/07/2009 10:45pm (2  years ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+			</ul>
+			
+			
+				<div id="PageCommentsPagination">
+					<p>
+					
+					
+					
+						
+							
+								<strong>1</strong>
+							
+						
+							
+								<a href="index.html%3FcommentStart=10.html">2</a>
+							
+						
+					
+	
+					
+						<a href="index.html%3FcommentStart=10.html">next &raquo;</a>
+					
+					</p>
+				</div>
+			
+		
+	</div>
+	<p id="CommentsRSSFeed">
+		<a class="commentrss" href="../PageComment/rss%3Fpageid=32.html">RSS feed for comments on this page</a> | 
+		<a href="../PageComment/rss.html" class="commentrss" title="View all Comments">RSS feed for all comments</a>
+	</p>
+</div>
+	
+
+</div>
+
+		</div>
+		
+	   <div class="clear"><!-- --></div>
+	</div>
+	<div id="Footer">
+		<div class="footerTop">
+	<!-- -->
+</div>
+<p>KeePassMobile Copyright &copy; 2010 | <a href="../imprint.html" title="Imprint">Imprint</a> | <a href="../contact.html" title="Contact">Contact</a> | <a href="../donate.1.html" title="Donate">Donate</a></p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1424031-4");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</div> 
+</div>
+
+</body>
+</html>

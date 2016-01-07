@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+
+  <head>
+		<base href="" />
+		<title>Translations &raquo; KeePassMobile - Mobile Password Management Software</title>
+		<meta name="generator" http-equiv="generator" content="SilverStripe 2.3.1 - http://www.silverstripe.com" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en"/>
+
+		<link rel="shortcut icon" href="../favicon.ico" />
+		
+		 
+		 
+		 
+		
+		<!--[if IE 6]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie6.css);
+			</style> 
+		<![endif]-->
+		
+		<!--[if IE 7]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie7.css);
+			</style> 
+		<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.5.0/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+	<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/layout.css%3Fm=1247729689.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/typography.css%3Fm=1241954114.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/form.css%3Fm=1241954113.css" />
+</head>
+<body><script type="text/javascript" src="../jsparty/prototype.js%3Fm=1241953734"></script><script type="text/javascript" src="../jsparty/behaviour.js%3Fm=1241953732"></script><script type="text/javascript" src="../jsparty/prototype_improvements.js%3Fm=1241953736"></script><script type="text/javascript" src="../sapphire/javascript/i18n.js%3Fm=1241953914"></script><script type="text/javascript" src="../sapphire/javascript/lang/en_US.js%3Fm=1241954081"></script><script type="text/javascript" src="../sapphire/javascript/Validator.js%3Fm=1241953917"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script>
+<div id="BgContainer">
+	<div id="Container">
+		<div id="Header">
+			<form id="SearchForm_SearchForm" action="http://localhost:8080/translations/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="Search" /></div></div>
+		
+		
+			<input class="action" id="SearchForm_SearchForm_action_results" type="submit" name="action_results" value="Search" title="Search" />
+		
+	</fieldset>
+</form>
+
+	   		<h1>KeePassMobile</h1>
+	    	<p>Secure Password Management On The Go!</p>
+		</div>
+		
+		<div id="Navigation">
+			<ul>
+ 		  
+  		<li><a href="../index.html" title="Go to the Home page" class="link"><span>Home</span></a></li>
+   		  
+  		<li><a href="../news/index.html" title="Go to the News page" class="link"><span>News</span></a></li>
+   		  
+  		<li><a href="../download/index.html" title="Go to the Download page" class="link"><span>Download</span></a></li>
+   		  
+  		<li><a href="../faq/index.html" title="Go to the FAQ page" class="link"><span>FAQ</span></a></li>
+   		  
+  		<li><a href="index.html" title="Go to the Translations page" class="current"><span>Translations</span></a></li>
+   		  
+  		<li><a href="../forums/index.html" title="Go to the Support page" class="link"><span>Support</span></a></li>
+   		  
+  		<li><a href="../donate/index.html" title="Go to the Donate page" class="link"><span>Donate</span></a></li>
+   	
+ </ul>
+	  	</div>
+	  	
+	  	<div class="clear"><!-- --></div>
+		
+		<div id="Layout">
+		  <div class="typography">
+	
+			
+	
+	
+		<h2>Translations</h2>
+	
+		<p>Here you can see which translations are available for KeePassMobile and  how old the translations are. The older the translation is, the less  words of the current KeePassMobile release are translated for this  langugage. So you can see that some translations need a refresh:</p>
+<p><strong>If you want to rework a translation or translate  KeePassMobile to a language not listed yet, please follow the  instructions <a href="index.html#instructions">below</a>.</strong></p>
+<table border="0">
+<thead> 
+<tr>
+<th>Language</th><th>V0.2</th><th>V0.5</th><th>V0.6</th><th>V0.8</th><th>V0.9</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td><a href="../assets/translation/langda.properties" target="_blank">Danish (da)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Peter Gregor Gregersen</td>
+<td style="background-color: #ff99ff;">&nbsp;x</td>
+<td style="background-color: #ffccff;">&nbsp;x</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langde.properties" target="_blank">German (de)</a></td>
+<td style="background-color: #ff33ff;">Christoph</td>
+<td style="background-color: #ff33ff;">Christoph</td>
+<td style="background-color: #ff33ff;">Christoph</td>
+<td style="background-color: #ff33ff;">Christoph</td>
+<td style="background-color: #ff33ff;">Christoph</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/lang.properties" target="_blank">English (en)</a></td>
+<td style="background-color: #ff33ff;">Christoph</td>
+<td style="background-color: #ff33ff;">Christoph</td>
+<td style="background-color: #ff33ff;">Christoph</td>
+<td style="background-color: #ff33ff;">Christoph</td>
+<td style="background-color: #ff33ff;">Christoph</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langes.properties" target="_blank">Spanish (es)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Ricardo Gadea Lara</td>
+<td style="background-color: #ff99ff;">x</td>
+<td style="background-color: #ffccff;">x</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langhe.properties" target="_blank">Hebrew (he)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Roee Rakovsky</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langit.properties" target="_blank">Italian (it)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Glyn</td>
+<td style="background-color: #ff99ff;">x</td>
+<td style="background-color: #ff33ff;">David Coen</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langnl.properties" target="_blank">Dutch (nl)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Wietse van Buitenen</td>
+<td style="background-color: #ff99ff;">x</td>
+<td style="background-color: #ffccff;">x</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langnn.properties" target="_blank">Norwegian Nynorsk (nn)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Yngve Spjeld Landro</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langpl.properties" target="_blank">Polish (pl)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Mikolaj Rozwadowski</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langru.properties" target="_blank">Russian (ru)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Evgeniy Kostenkov</td>
+<td style="background-color: #ff99ff;">x</td>
+<td style="background-color: #ff33ff;">Kirill Kozlov</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langsv.properties" target="_blank">Swedish (sv)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Carl Gustafsson</td>
+<td style="background-color: #ff99ff;">x</td>
+<td style="background-color: #ffccff;">x</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/languk.properties" target="_blank">Ukrainian (uk)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Roman Levitsky</td>
+<td style="background-color: #ff99ff;">x</td>
+<td style="background-color: #ffccff;">x</td>
+</tr>
+<tr>
+<td><a href="../assets/translation/langzh.properties" target="_blank">Chinese (zh)</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td style="background-color: #ff33ff;">Simpson</td>
+<td style="background-color: #ff99ff;">x</td>
+</tr>
+</tbody>
+</table>
+<h6>Table Legend</h6>
+<ul>
+<li><strong>Blank cell</strong>: No translations was available for this version</li>
+<li><strong>Cell with name of translator</strong>: Translation was newly written/reworked for this version by this person (by this way: a big "Thank you!" to all translators)</li>
+<li><strong>Cell with 'x'</strong>: 'Translation was not newly written/reworked for this version, but the old translation is included. Words/Phrases that are new in this version will be shown in English.</li>
+<li><strong>Cell with '-'</strong>: Translation was removed, because it was too old and most of the words were shown in English.</li>
+</ul>
+<h5><a name="instructions"></a>Translation instructions</h5>
+<p>Here are the instructions how to translate KeePassMobile into your language:</p>
+<ol>
+<li>Prerequisite: You must have Java installed on your computer. If you don't have Java yet, please go to <a href="http://www.java.com" target="_blank">http://www.java.com</a> and start the installation.</li>
+<li>Download the translation editor 'I18NEdit' <a href="http://sourceforge.net/projects/i18nedit/" target="_blank">from sourceforge</a> and save it into any folder</li>
+<li>Download the <a href="../assets/translation/i18nedit.properties" target="_blank">I18NEdit KeePassMobile project file</a> ('i18nedit.properties') and save it into the same folder</li>
+<li>Download the <a href="../assets/translation/lang.properties" target="_blank">latest English translation</a> for KeePassMobile and save it into the same folder</li>
+<li>If you want to rework an existing translation click on the language name <strong>in the table above</strong> (first column) to download the latest version of the translation. <strong>Attention</strong>: there is an error in the file name that has to be corrected first: rename the file to <strong>lang_xy.properties</strong>. <strong>The downloaded version misses the '_'!</strong> Rename and save this file into the same folder as the English translation and the project file. If you create a new translation, skip this step.</li>
+<li>Open the file 'i18nedit.properties' file with a text editor and replace the 'locales' setting with the language-code you want to translate KeePassMobile to (for all language-codes see <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">ISO 639-1 (two-letter codes!)</a>).&nbsp; If you want to translate KeePassMobile to Spanish for example, you have to replace the line to:<br />
+<pre>locales=es</pre>
+If you want to translate KeePassMobile to more than one language, you can add more language-codes, separated with space. This example is for Spanish AND French translation:<br />
+<pre>locales=es fr</pre>
+</li>
+<li>Start 'I18NEdit': Open the command line, navigate to the folder, where the files have been extracted to and type:<br />
+<pre>java -jar i18nedit-1.2.2.jar</pre>
+</li>
+<li>Inside 'I18NEdit': Go to "Projects/Open project..." and open the 'i18nedit.properties' file. This opens the KeePassMobile translation project in an inner window. See the <a href="http://i18nedit.sourceforge.net/userdoc/">docs</a> for more informations on how to use 'I18NEdit'</li>
+<li>Select 'lang' in the tree on the left side. Now you can see all translation keys in the 'Resource' list. If you select a translation key you can see the English translation in the 'English Content' field. Now you can start translating by filling in the corresponding translation into the other 'Content' field(s).</li>
+<li>Go through all translation keys and fill in your translations (<strong>Attention</strong>: some translators reported that the 'i18nedit' editor crashes sometimes. <strong>Please, save and backup your work periodically</strong>).</li>
+<li>If you close the translation editor the translations are saved automatically (in the above example, a file with the name 'lang_es.properties' will be generated). The next time you start the editor all translations are loaded automatically.</li>
+<li>After you finished translating all KeePassMobile words/sentences, please open the 'lang_xy.properties' file(s) with a text editor and fill in your name an email address in the first (comment) line.</li>
+<li>Send the resulting 'lang_xy.properties' file(s) to me.</li>
+</ol>
+<p>If you have any problems, please <a href="mailto:contact@keepassmobile.com">contact me</a>. Thanks in advance for your help.<strong><br /></strong></p>
+		
+		
+	
+</div>
+
+	
+	
+	
+		</div>
+		
+	   <div class="clear"><!-- --></div>
+	</div>
+	<div id="Footer">
+		<div class="footerTop">
+	<!-- -->
+</div>
+<p>KeePassMobile Copyright &copy; 2010 | <a href="../imprint.html" title="Imprint">Imprint</a> | <a href="../contact.html" title="Contact">Contact</a> | <a href="../donate.1.html" title="Donate">Donate</a></p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1424031-4");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</div> 
+</div>
+
+</body>
+</html>

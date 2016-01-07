@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+
+  <head>
+		<base href="" />
+		<title>Version V0.9 released &raquo; KeePassMobile - Mobile Password Management Software</title>
+		<meta name="generator" http-equiv="generator" content="SilverStripe 2.3.1 - http://www.silverstripe.com" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en"/>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/" xmlns:dc="http://purl.org/dc/elements/1.1/" >
+	<rdf:Description rdf:about="/version-v0-9-released/" trackback:ping="/version-v0-9-released/trackbackping" dc:identifier="/version-v0-9-released/" dc:title="Version V0.9 released" />
+</rdf:RDF>
+
+		<link rel="shortcut icon" href="../favicon.ico" />
+		
+		 
+		 
+		 
+		
+		<!--[if IE 6]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie6.css);
+			</style> 
+		<![endif]-->
+		
+		<!--[if IE 7]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie7.css);
+			</style> 
+		<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.5.0/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+	<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/layout.css%3Fm=1247729689.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/typography.css%3Fm=1241954114.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/form.css%3Fm=1241954113.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy_blog/css/blog.css%3Fm=1241954120.css" />
+</head>
+<body><script type="text/javascript" src="../jsparty/prototype.js%3Fm=1241953734"></script><script type="text/javascript" src="../jsparty/behaviour.js%3Fm=1241953732"></script><script type="text/javascript" src="../jsparty/prototype_improvements.js%3Fm=1241953736"></script><script type="text/javascript" src="../sapphire/javascript/i18n.js%3Fm=1241953914"></script><script type="text/javascript" src="../sapphire/javascript/lang/en_US.js%3Fm=1241954081"></script><script type="text/javascript" src="../sapphire/javascript/Validator.js%3Fm=1241953917"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#PageCommentInterface_Form_PostCommentForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#PageCommentInterface_Form_PostCommentForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('PageCommentInterface_Form_PostCommentForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#PageCommentInterface_Form_PostCommentForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('PageCommentInterface_Form_PostCommentForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script>
+<div id="BgContainer">
+	<div id="Container">
+		<div id="Header">
+			<form id="SearchForm_SearchForm" action="http://localhost:8080/version-v0-9-released/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="Search" /></div></div>
+		
+		
+			<input class="action" id="SearchForm_SearchForm_action_results" type="submit" name="action_results" value="Search" title="Search" />
+		
+	</fieldset>
+</form>
+
+	   		<h1>KeePassMobile</h1>
+	    	<p>Secure Password Management On The Go!</p>
+		</div>
+		
+		<div id="Navigation">
+			<ul>
+ 		  
+  		<li><a href="../index.html" title="Go to the Home page" class="link"><span>Home</span></a></li>
+   		  
+  		<li><a href="../news/index.html" title="Go to the News page" class="section"><span>News</span></a></li>
+   		  
+  		<li><a href="../download/index.html" title="Go to the Download page" class="link"><span>Download</span></a></li>
+   		  
+  		<li><a href="../faq/index.html" title="Go to the FAQ page" class="link"><span>FAQ</span></a></li>
+   		  
+  		<li><a href="../translations/index.html" title="Go to the Translations page" class="link"><span>Translations</span></a></li>
+   		  
+  		<li><a href="../forums/index.html" title="Go to the Support page" class="link"><span>Support</span></a></li>
+   		  
+  		<li><a href="../donate/index.html" title="Go to the Donate page" class="link"><span>Donate</span></a></li>
+   	
+ </ul>
+	  	</div>
+	  	
+	  	<div class="clear"><!-- --></div>
+		
+		<div id="Layout">
+		  <!-- % include BlogSideBar % -->
+<div id="BlogContent" class="typography">
+	
+	<div id="Breadcrumbs">
+	   	<p><a href="../news/index.html">News</a> &raquo; Version V0.9 released</p>
+	</div>
+
+	
+	<div class="blogEntry">
+		<h2>Version V0.9 released</h2>
+		<p class="authorDate">Posted by Christoph on 2 October 2010 | 7 Comments</p>
+		
+			<p class="tags">
+				 Tags: 
+				
+					<a href="../news/tag/release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+				
+					<a href="../news/tag/V0.9" title="View all posts tagged 'V0.9'" rel="tag">V0.9</a>
+				
+			</p>
+		
+		
+			<p>OK, I must admit, it took far too long time, but finally it's here: KeePassMobile V0.9! It has a bunch of long awaited features in it. But have a look on the release notes for yourself...</p>
+<p><strong>If you like the improvements of KeePassMobile V0.9 please <a href="../flattr/index.html">flattr</a> this version:</strong></p>
+<div class="image center"><a class="FlattrButton" style="display:none;" href="index.html"></a></div>
+<h5>Release Notes V0.9</h5>
+<p>Here are the changes of release V0.9 in detail:</p>
+<h6>New features</h6>
+<ul>
+<li><strong>Password generator</strong></li>
+<li><strong>Automatic backup</strong> of changed/deleted password entries</li>
+<li>Move password entries between groups (<strong>cut/paste entries</strong>)</li>
+<li>Backup entries can be deleted forever</li>
+<li><strong>Add/Delete attachment</strong> to/from a password entry</li>
+<li><strong>Add/Change/Remove keyfile</strong> that is used for database encryption</li>
+<li>New option to hide the backup folder</li>
+<li>New option to <strong>change font size</strong></li>
+<li>Edit title of a password entry (using menu entry 'Edit Item')</li>
+<li>Show tree 'path' in title</li>
+<li>New translations available: <strong>Hebrew</strong> (thanks to Roee Rakovsky), <strong>Norwegian Nynorsk</strong> (thanks to Yngve Spjeld Landro), <strong>Polish</strong> (thanks to Mikołaj Rozwadowski)</li>
+</ul>
+<h6>Improvements</h6>
+<ul>
+<li>Improved and stabilized algorithm for saving the KeePass database, <strong>prevents of corrupt database files</strong> when KeePassMobile crashes</li>
+<li>Improved progress bar (while loading)</li>
+<li>Polished look and feel of the 'nice' theme</li>
+<li>Less resource usage for 'fast' theme</li>
+<li>Improved translations: <strong>Italian</strong> (thanks to David Coen), <strong>Russian</strong> (thanks to Kirill Kozlov)</li>
+<li>Improved platform identification</li>
+<li>Close the application properly, if platform verification fails</li>
+</ul>
+<h6>Bug fixes</h6>
+<ul>
+<li>Fixed: If folder of last opened database is deleted, KeePassMobile can not load other databases any more</li>
+<li>Fixed: Notes field can only edit up to 124 characters</li>
+<li>Fixed: Bug in statistics calculation caused NullPointerException</li>
+<li>Fixed: Bug when user wants to delete entry's expiry date</li>
+<li>Fixed: Error when icon of entry is not available</li>
+</ul>
+		
+		<br />
+	</div>
+	
+	
+	
+	
+	<div id="PageComments_holder" class="typography">
+	
+		<h4>Post your comment</h4>
+		
+		
+<form id="PageCommentInterface_Form_PostCommentForm" action="http://localhost:8080/version-v0-9-released/PageComments/PostCommentForm" method="post" enctype="application/x-www-form-urlencoded">
+
+	
+	<p id="PageCommentInterface_Form_PostCommentForm_error" class="message " style="display: none"></p>
+	
+	
+	<fieldset>
+		<legend></legend>
+		
+			<input class="hidden" type="hidden" id="PageCommentInterface_Form_PostCommentForm_ParentID" name="ParentID" value="49" />
+		
+			<div id="Name" class="field text "><label class="left" for="PageCommentInterface_Form_PostCommentForm_Name">Your name</label><div class="middleColumn"><input type="text" class="text" id="PageCommentInterface_Form_PostCommentForm_Name" name="Name" value="" /></div></div>
+		
+			<div id="CommenterURL" class="field text "><label class="left" for="PageCommentInterface_Form_PostCommentForm_CommenterURL">Your website URL</label><div class="middleColumn"><input type="text" class="text" id="PageCommentInterface_Form_PostCommentForm_CommenterURL" name="CommenterURL" value="" /></div></div>
+		
+			<div id="Comment" class="field textarea "><label class="left" for="PageCommentInterface_Form_PostCommentForm_Comment">Comments</label><div class="middleColumn"><textarea id="PageCommentInterface_Form_PostCommentForm_Comment" name="Comment" rows="5" cols="20"></textarea></div></div>
+		
+			<input class="hidden" type="hidden" id="PageCommentInterface_Form_PostCommentForm_SecurityID" name="SecurityID" value="1666553880" />
+		
+			
+		
+		<div class="clear"><!-- --></div>
+	</fieldset>
+
+	
+	<div class="Actions">
+		
+			<input class="action" id="PageCommentInterface_Form_PostCommentForm_action_postcomment" type="submit" name="action_postcomment" value="Post" title="Post" />
+		
+	</div>
+	
+
+</form>
+
+
+	
+	
+	<h4>Comments</h4>
+	
+	<div id="CommentHolder">
+		
+			<ul id="PageComments">
+				
+					<li class="odd first  notspam">
+						<p class="comment" id="PageComment_685">
+	
+		which pc keepass version compatible to this version of keepassmobile?	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Firex, 02/08/2011 6:56pm (2  months ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even notspam">
+						<p class="comment" id="PageComment_616">
+	
+		Hello John<br /><br />can you give me more information in the forum or write me a mail to contact@keepassmobile.com, please.<br /><br />Christoph	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Christoph, 24/03/2011 8:47am (7  months ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="odd notspam">
+						<p class="comment" id="PageComment_615">
+	
+		Bad news<br /><br />0.9 - "Processing data": "The database could not be loaded. The error message is: 0."<br /><br />0.8.1 works fine	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by John, 23/03/2011 7:54pm (7  months ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even notspam">
+						<p class="comment" id="PageComment_542">
+	
+		Thank you, I love this app on my E51.	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Helmut, 26/10/2010 7:54pm (12  months ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="odd notspam">
+						<p class="comment" id="PageComment_532">
+	
+		Thanks a lot for this great app und your ongoing development!	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Rafael, 17/10/2010 5:10pm (12  months ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even notspam">
+						<p class="comment" id="PageComment_527">
+	
+		Hello<br /><br />I am working on a V0.9 release specially for old/low-end mobiles with only limited resources. Please contact me at contact@keepassmobile.com to get and test a beta release of this version.<br /><br />Regards<br />Christoph<br />	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Christoph, 05/10/2010 9:33pm (1  year ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="odd last  notspam">
+						<p class="comment" id="PageComment_526">
+	
+		Hi,<br /><br />Thanks for the new release. Just tried upgrading from 0.8.1 to 0.9 on a Sony Ericsson K750i and got the following error at the step "Processing data": "The database could not be loaded. The error message is: unknown error."<br /><br />Maybe a performance problem: 86 % used memory after initialisation, 883/1023 kb.<br /><br />So back to 0.8.1 which correctly opens my .kdb file.<br /><br />Anyway, thanks for your great work and for sharing.	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by ano, 04/10/2010 5:14pm (1  year ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+			</ul>
+			
+			
+		
+	</div>
+	<p id="CommentsRSSFeed">
+		<a class="commentrss" href="../PageComment/rss%3Fpageid=49.html">RSS feed for comments on this page</a> | 
+		<a href="../PageComment/rss.html" class="commentrss" title="View all Comments">RSS feed for all comments</a>
+	</p>
+</div>
+	
+
+</div>
+
+		</div>
+		
+	   <div class="clear"><!-- --></div>
+	</div>
+	<div id="Footer">
+		<div class="footerTop">
+	<!-- -->
+</div>
+<p>KeePassMobile Copyright &copy; 2010 | <a href="../imprint.html" title="Imprint">Imprint</a> | <a href="../contact.html" title="Contact">Contact</a> | <a href="../donate.1.html" title="Donate">Donate</a></p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1424031-4");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</div> 
+</div>
+
+</body>
+</html>

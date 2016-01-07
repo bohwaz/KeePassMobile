@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+
+  <head>
+		<base href="" />
+		<title>Download &raquo; KeePassMobile - Mobile Password Management Software</title>
+		<meta name="generator" http-equiv="generator" content="SilverStripe 2.3.1 - http://www.silverstripe.com" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" http-equiv="keywords" content="keepassmobile, keepass, mobile, password, manager, software, free, open, source, opensource" />
+<meta name="description" http-equiv="description" content="KeePassMobile is a free, open source password manager software for mobile phones, that stores passwords in a highly-encrypted database" />
+<meta http-equiv="Content-Language" content="en"/>
+
+		<link rel="shortcut icon" href="../favicon.ico" />
+		
+		 
+		 
+		 
+		
+		<!--[if IE 6]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie6.css);
+			</style> 
+		<![endif]-->
+		
+		<!--[if IE 7]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie7.css);
+			</style> 
+		<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.5.0/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+	<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/layout.css%3Fm=1247729689.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/typography.css%3Fm=1241954114.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/form.css%3Fm=1241954113.css" />
+</head>
+<body><script type="text/javascript" src="../jsparty/prototype.js%3Fm=1241953734"></script><script type="text/javascript" src="../jsparty/behaviour.js%3Fm=1241953732"></script><script type="text/javascript" src="../jsparty/prototype_improvements.js%3Fm=1241953736"></script><script type="text/javascript" src="../sapphire/javascript/i18n.js%3Fm=1241953914"></script><script type="text/javascript" src="../sapphire/javascript/lang/en_US.js%3Fm=1241954081"></script><script type="text/javascript" src="../sapphire/javascript/Validator.js%3Fm=1241953917"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script>
+<div id="BgContainer">
+	<div id="Container">
+		<div id="Header">
+			<form id="SearchForm_SearchForm" action="http://localhost:8080/download/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="Search" /></div></div>
+		
+		
+			<input class="action" id="SearchForm_SearchForm_action_results" type="submit" name="action_results" value="Search" title="Search" />
+		
+	</fieldset>
+</form>
+
+	   		<h1>KeePassMobile</h1>
+	    	<p>Secure Password Management On The Go!</p>
+		</div>
+		
+		<div id="Navigation">
+			<ul>
+ 		  
+  		<li><a href="../index.html" title="Go to the Home page" class="link"><span>Home</span></a></li>
+   		  
+  		<li><a href="../news/index.html" title="Go to the News page" class="link"><span>News</span></a></li>
+   		  
+  		<li><a href="index.html" title="Go to the Download page" class="current"><span>Download</span></a></li>
+   		  
+  		<li><a href="../faq/index.html" title="Go to the FAQ page" class="link"><span>FAQ</span></a></li>
+   		  
+  		<li><a href="../translations/index.html" title="Go to the Translations page" class="link"><span>Translations</span></a></li>
+   		  
+  		<li><a href="../forums/index.html" title="Go to the Support page" class="link"><span>Support</span></a></li>
+   		  
+  		<li><a href="../donate/index.html" title="Go to the Donate page" class="link"><span>Donate</span></a></li>
+   	
+ </ul>
+	  	</div>
+	  	
+	  	<div class="clear"><!-- --></div>
+		
+		<div id="Layout">
+		  <div class="typography">
+	
+			
+	
+	
+		<h2>Download</h2>
+	
+		<p>There are two different ways to download KeePassMobile and install it on your mobile phone.</p>
+<h2>
+<div class="image left" style="width: 217px; margin-right: 15px;"><img src="../assets/screens/keepassmobilemain.jpg" alt="" width="217" height="404" /></div>
+Computer Download</h2>
+<p>Download the <a title="KeePassMobile Release V0.9.1" href="../assets/keepassmobile/KeePassMobile-0.9.1.zip" target="_blank">latest release</a> of KeePassMobile to your PC. The installation on your mobile phone depends on the software of the mobile manufacturer. If you have problems, take a look/leave a note in the <a title="Installation Guides" href="../installation-guides/index.html">"Installation Guide"-forums</a>.</p>
+<p style="text-align: center;"><a style="background-image:none;" title="Download to your PC" href="../assets/keepassmobile/KeePassMobile-0.9.1.zip"><img src="../assets/icons/downloadpc.jpg" alt="" width="266" height="57" /></a></p>
+<h2>Mobile Download</h2>
+<p>Open the browser of your mobile phone, navigate to <a title="KeePassMobile Download page for mobiles" href="http://m.keepassmobile.com/" target="_blank">http://m.keepassmobile.com</a> and follow the instructions on the screen of your mobile.</p>
+<p><strong>Attention</strong>: this downloads approximately <strong>440kb</strong> from the internet directly to your mobile phone. Dependent on your mobile phone contract this is not free of costs.</p>
+<p style="text-align: center;"><a title="Go to mobile website" href="http://m.keepassmobile.com/" target="_blank"><img src="../assets/icons/downloadmobile.jpg" alt="" width="266" height="57" /></a></p>
+<h2><a name="light"></a>KeePassMobile LIGHT for old/low-end mobiles</h2>
+<p>The standard package of KeePassMobile is very resource hungry and runs not well on old/low-end mobiles. If you own such a mobile than try the <strong>LIGHT version</strong> of KeePassMobile. Download the <a title="KeePassMobile Light Release V0.9.1" href="../assets/keepassmobile/KeePassMobile-0.9.1-light.zip" target="_blank">latest release</a> of <strong>KeePassMobile LIGHT</strong> to your PC and install it like the standard package. Please leave a quick note in the <a href="../light-forum/index.html">forum</a>, if the LIGHT version works for your mobile. See the <a href="../faq/index.html#perf_light">FAQ</a> on how KeePassMobile LIGHT differs from KeePassMobile.</p>
+<h2>I have successfully installed KeePassMobile on my mobile! What to do next?</h2>
+<p>If you managed to install KeePassMobile on your mobile phone, please <a title="Installation Guides" href="../installation-guides/index.html">leave a note</a> in the 'Installation' forum to help other users and/or support it as <strong>tester</strong> or <a href="../translations/index.html"><strong>translator</strong></a>. If you find yourself using KeePassMobile regularly and if you are <strong>happy  with the quality and the progress</strong> of this project, you are kindly  requested to <strong><a href="../donate/index.html">donate</a></strong> and/or <strong><a href="../flattr/index.html">flattr</a></strong>:</p>
+<div class="image center"><a class="FlattrButton" style="display:none;" href="../index.html"></a></div>
+<h2>Previous Releases</h2>
+<p>If you have problems with the current release of KeePassMobile try to install a previous release. Please pay attention, that <strong>previous releases are not maintained</strong> any more!</p>
+<ul>
+<li>V0.8.1: <a href="../version-v0-8-1-released/index.html">release notes</a> and <a title="KeePassMobile Release V0.8.1" href="../assets/keepassmobile/KeePassMobile-0.8.1.zip" target="_blank">software package</a></li>
+<li>V0.6: <a href="../version-v0-6-released/index.html">release notes</a> and <a title="KeePassMobile Release V0.6" href="../assets/keepassmobile/KeePassMobile-0.6.zip" target="_blank">software package</a></li>
+<li>V0.5: <a href="../version-v0-5-released/index.html">release notes</a> and <a title="KeePassMobile Release V0.5" href="../assets/keepassmobile/KeePassMobile-0.5.zip" target="_blank">software package</a></li>
+</ul>
+<h2>Source Package</h2>
+<p>KeePassMobile is free, open source software and can be redistributed  and/or modified under the terms of the GNU General Public License  version 3 (GPL3). You can download the <a title="Latest KeePassMobile source package" href="../assets/keepassmobile/keepassmobile-src.zip">latest sources</a> here.</p>
+<h2>Problems?</h2>
+<p>If you have any problems installing or using KeePassMobile <a title="Got to the FAQ" href="../faq/index.html">read the FAQ</a> or leave a note <a title="KeePassMobile Forum" href="../general-discussion/index.html">in the forums</a>.</p>
+		
+		
+	
+</div>
+
+	
+	
+	
+		</div>
+		
+	   <div class="clear"><!-- --></div>
+	</div>
+	<div id="Footer">
+		<div class="footerTop">
+	<!-- -->
+</div>
+<p>KeePassMobile Copyright &copy; 2010 | <a href="../imprint.html" title="Imprint">Imprint</a> | <a href="../contact.html" title="Contact">Contact</a> | <a href="../donate.1.html" title="Donate">Donate</a></p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1424031-4");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</div> 
+</div>
+
+</body>
+</html>

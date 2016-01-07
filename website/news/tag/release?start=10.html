@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+
+  <head>
+		<base href="" />
+		<title>News &raquo; KeePassMobile - Mobile Password Management Software</title>
+		<meta name="generator" http-equiv="generator" content="SilverStripe 2.3.1 - http://www.silverstripe.com" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" http-equiv="keywords" content="keepassmobile, keepass, mobile, password, manager, software, free, open, source, opensource" />
+<meta name="description" http-equiv="description" content="KeePassMobile is a free, open source password manager software for mobile phones, that stores passwords in a highly-encrypted database" />
+<meta http-equiv="Content-Language" content="en"/>
+
+		<link rel="shortcut icon" href="../../favicon.ico" />
+		
+		 
+		 
+		 
+		
+		<!--[if IE 6]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie6.css);
+			</style> 
+		<![endif]-->
+		
+		<!--[if IE 7]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie7.css);
+			</style> 
+		<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.5.0/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+	<link rel="stylesheet" type="text/css" href="../../themes/blackcandy/css/layout.css%3Fm=1247729689.css" />
+<link rel="stylesheet" type="text/css" href="../../themes/blackcandy/css/typography.css%3Fm=1241954114.css" />
+<link rel="stylesheet" type="text/css" href="../../themes/blackcandy/css/form.css%3Fm=1241954113.css" />
+<link rel="stylesheet" type="text/css" href="../../themes/blackcandy_blog/css/blog.css%3Fm=1241954120.css" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/themes/blackcandy_blog/css/bbcodehelp.css?m=1241954120" />
+<link rel="alternate" type="application/rss+xml" title="RSS feed of this blog" href="../rss.html" />
+</head>
+<body><script type="text/javascript" src="../../jsparty/prototype.js%3Fm=1241953734"></script><script type="text/javascript" src="../../jsparty/behaviour.js%3Fm=1241953732"></script><script type="text/javascript" src="../../jsparty/prototype_improvements.js%3Fm=1241953736"></script><script type="text/javascript" src="../../sapphire/javascript/i18n.js%3Fm=1241953914"></script><script type="text/javascript" src="../../sapphire/javascript/lang/en_US.js%3Fm=1241954081"></script><script type="text/javascript" src="../../sapphire/javascript/Validator.js%3Fm=1241953917"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script>
+<div id="BgContainer">
+	<div id="Container">
+		<div id="Header">
+			<form id="SearchForm_SearchForm" action="http://localhost:8080/news/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="Search" /></div></div>
+		
+		
+			<input class="action" id="SearchForm_SearchForm_action_results" type="submit" name="action_results" value="Search" title="Search" />
+		
+	</fieldset>
+</form>
+
+	   		<h1>KeePassMobile</h1>
+	    	<p>Secure Password Management On The Go!</p>
+		</div>
+		
+		<div id="Navigation">
+			<ul>
+ 		  
+  		<li><a href="../../index.html" title="Go to the Home page" class="link"><span>Home</span></a></li>
+   		  
+  		<li><a href="../index.html" title="Go to the News page" class="current"><span>News</span></a></li>
+   		  
+  		<li><a href="../../download/index.html" title="Go to the Download page" class="link"><span>Download</span></a></li>
+   		  
+  		<li><a href="../../faq/index.html" title="Go to the FAQ page" class="link"><span>FAQ</span></a></li>
+   		  
+  		<li><a href="../../translations/index.html" title="Go to the Translations page" class="link"><span>Translations</span></a></li>
+   		  
+  		<li><a href="../../forums/index.html" title="Go to the Support page" class="link"><span>Support</span></a></li>
+   		  
+  		<li><a href="../../donate/index.html" title="Go to the Donate page" class="link"><span>Donate</span></a></li>
+   	
+ </ul>
+	  	</div>
+	  	
+	  	<div class="clear"><!-- --></div>
+		
+		<div id="Layout">
+		  <div id="BlogContent" class="blogcontent typography">
+	
+	
+	
+	
+		<h3>Viewing entries tagged with 'release'</h3>
+	
+	
+	
+		
+				<div class="blogSummary">
+	<h2><a href="../../plans-for-v1/index.html" title="View full post titled - 'Plans for V1.0'">Plans for V1.0</a></h2>
+	<p class="authorDate">Posted by Christoph on 15 May 2011 | <a href="../../plans-for-v1/index.html#PageComments_holder" title="View Comments Posted">8 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="V1.0" title="View all posts tagged 'V1.0'" rel="tag">V1.0</a>
+			
+		</p>
+	
+	<p>Hello again!</p>
+<p>In the last six month I was totally occupied programming my program assignment for the Sun Certified Java Developer (SCJD) exam. Therefore I couldn't work on KeePassMobile and that is why you haven't heard anything from me in the last time. Now, that I have finished the project and send it to Oracle (still waiting for the results:) I want to bring KeePassMobile one step further: KeePassMobile V1.0!<br /><br />This is, what I want to achieve for KeePassMobile V1.0:</p>
+	<p class="blogVitals"><a href="../../plans-for-v1/index.html#PageComments_holder" class="comments" title="View Comments for this post">8 comments</a> | <a href="../../plans-for-v1/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="../../keepassmobile-v0-9-light-released/index.html" title="View full post titled - 'KeePassMobile V0.9 LIGHT released'">KeePassMobile V0.9 LIGHT released</a></h2>
+	<p class="authorDate">Posted by Christoph on 21 November 2010 | <a href="../../keepassmobile-v0-9-light-released/index.html#PageComments_holder" title="View Comments Posted">1 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="V0.9" title="View all posts tagged 'V0.9'" rel="tag">V0.9</a>,
+			
+				<a href="light.html" title="View all posts tagged 'light'" rel="tag">light</a>
+			
+		</p>
+	
+	<p>Until now, there has only be one KeePassMobile package for all java mobiles. Unfortunatelly, KeePassMobile does not run well on<strong> old/low-end java mobiles</strong> because it is very resource hungry. Therefore I have created a special package called <strong>KeePassMobile LIGHT</strong> that addresses this problem.</p>
+	<p class="blogVitals"><a href="../../keepassmobile-v0-9-light-released/index.html#PageComments_holder" class="comments" title="View Comments for this post">1 comments</a> | <a href="../../keepassmobile-v0-9-light-released/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="../../version-v0-9-released/index.html" title="View full post titled - 'Version V0.9 released'">Version V0.9 released</a></h2>
+	<p class="authorDate">Posted by Christoph on 2 October 2010 | <a href="../../version-v0-9-released/index.html#PageComments_holder" title="View Comments Posted">7 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="V0.9" title="View all posts tagged 'V0.9'" rel="tag">V0.9</a>
+			
+		</p>
+	
+	<p>OK, I must admit, it took far too long time, but finally it's here: KeePassMobile V0.9! It has a bunch of long awaited features in it. But have a look on the release notes for yourself...</p>
+	<p class="blogVitals"><a href="../../version-v0-9-released/index.html#PageComments_holder" class="comments" title="View Comments for this post">7 comments</a> | <a href="../../version-v0-9-released/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="../../keepassmobile-v0-9-beta-2-released/index.html" title="View full post titled - 'KeePassMobile V0.9 BETA 2 released'">KeePassMobile V0.9 BETA 2 released</a></h2>
+	<p class="authorDate">Posted by Christoph on 7 August 2010 | <a href="../../keepassmobile-v0-9-beta-2-released/index.html#PageComments_holder" title="View Comments Posted">6 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="beta.html" title="View all posts tagged 'beta'" rel="tag">beta</a>,
+			
+				<a href="V0.9" title="View all posts tagged 'V0.9'" rel="tag">V0.9</a>
+			
+		</p>
+	
+	<p>Here is the second BETA release of the upcoming KeePassMobile V0.9.  This release should be quite stable by now. Anyhow, always keep a backup  of your password database elsewhere.</p>
+	<p class="blogVitals"><a href="../../keepassmobile-v0-9-beta-2-released/index.html#PageComments_holder" class="comments" title="View Comments for this post">6 comments</a> | <a href="../../keepassmobile-v0-9-beta-2-released/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="../../first-public-beta-release-v0-9/index.html" title="View full post titled - 'First Public Beta Release V0.9'">First Public Beta Release V0.9</a></h2>
+	<p class="authorDate">Posted by Christoph on 19 June 2010 | <a href="../../first-public-beta-release-v0-9/index.html#PageComments_holder" title="View Comments Posted">6 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="beta.html" title="View all posts tagged 'beta'" rel="tag">beta</a>,
+			
+				<a href="V0.9" title="View all posts tagged 'V0.9'" rel="tag">V0.9</a>
+			
+		</p>
+	
+	<p>In the past, I always asked volunteer testers to participate in a  closed beta test of the upcoming KeePassMobile release. I want to change  this for version V0.9. This is the first time a public beta release  will be available for everybody, who wants to test the new features. So  you can choose: if you want to have the stable and proven version of  KeePassMobile, stick to V0.8.1. But if you want to test the latest  improvements and cutting edge features then give V0.9-beta1 a try.</p>
+	<p class="blogVitals"><a href="../../first-public-beta-release-v0-9/index.html#PageComments_holder" class="comments" title="View Comments for this post">6 comments</a> | <a href="../../first-public-beta-release-v0-9/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="../../upcoming-version-v0-9/index.html" title="View full post titled - 'Upcoming Version V0.9'">Upcoming Version V0.9</a></h2>
+	<p class="authorDate">Posted by Christoph on 10 April 2010 | <a href="../../upcoming-version-v0-9/index.html#PageComments_holder" title="View Comments Posted">4 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="V0.9" title="View all posts tagged 'V0.9'" rel="tag">V0.9</a>
+			
+		</p>
+	
+	<p>I have been very busy at the beginning of the year. That is, why the  KeePassMobile development stuck the last three months, sorry. I changed  my job and work for <a href="http://www.canoo.com/" target="_blank">Canoo</a> now. Canoo has a very good reputation in the Java community and I am  proud that they chose me. There are so many new things to learn for me.</p>
+	<p class="blogVitals"><a href="../../upcoming-version-v0-9/index.html#PageComments_holder" class="comments" title="View Comments for this post">4 comments</a> | <a href="../../upcoming-version-v0-9/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="../../version-v0-8-1-released/index.html" title="View full post titled - 'Version V0.8.1 released'">Version V0.8.1 released</a></h2>
+	<p class="authorDate">Posted by Christoph on 20 March 2010 | <a href="../../version-v0-8-1-released/index.html#PageComments_holder" title="View Comments Posted">2 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="V0.8.1" title="View all posts tagged 'V0.8.1'" rel="tag">V0.8.1</a>
+			
+		</p>
+	
+	<p>KeePassMobile V0.8.1 has been released today. This is a bug fix release and does not contain any new features.</p>
+	<p class="blogVitals"><a href="../../version-v0-8-1-released/index.html#PageComments_holder" class="comments" title="View Comments for this post">2 comments</a> | <a href="../../version-v0-8-1-released/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="../../any-feature-requests/index.html" title="View full post titled - 'Any feature requests?'">Any feature requests?</a></h2>
+	<p class="authorDate">Posted by Christoph on 2 January 2010 | <a href="../../any-feature-requests/index.html#PageComments_holder" title="View Comments Posted">8 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="next.html" title="View all posts tagged 'next'" rel="tag">next</a>,
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="features.html" title="View all posts tagged 'features'" rel="tag">features</a>
+			
+		</p>
+	
+	<p><strong>KeePassMobile</strong> is as hobby project. I started it, because I  wanted to have an app for my mobile that could handle KeePass databases  in an intuitive way. So, in the past, I decided which feature made it  into a release and which doesn't. With V0.8 of KeePassMobile I have  achieved this personal goal and am now <strong>open for your input and ideas</strong>.</p>
+	<p class="blogVitals"><a href="../../any-feature-requests/index.html#PageComments_holder" class="comments" title="View Comments for this post">8 comments</a> | <a href="../../any-feature-requests/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="../../version-v0-8-released/index.html" title="View full post titled - 'Version V0.8 released'">Version V0.8 released</a></h2>
+	<p class="authorDate">Posted by Christoph on 3 December 2009 | <a href="../../version-v0-8-released/index.html#PageComments_holder" title="View Comments Posted">3 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+			
+				<a href="V0.8" title="View all posts tagged 'V0.8'" rel="tag">V0.8</a>
+			
+		</p>
+	
+	<p>I had not have as much time for KeePassMobile in the last couple of  weeks, than I should. Sorry for that. But after all, I am very proud to  release the version V0.8 of KeePassMobile today, that supports the long  awaited create, update and save functionality.</p>
+	<p class="blogVitals"><a href="../../version-v0-8-released/index.html#PageComments_holder" class="comments" title="View Comments for this post">3 comments</a> | <a href="../../version-v0-8-released/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+				<div class="blogSummary">
+	<h2><a href="../../beta-v0-8-on-its-way-to-the-testers/index.html" title="View full post titled - 'Beta V0.8 on its way to the testers'">Beta V0.8 on its way to the testers</a></h2>
+	<p class="authorDate">Posted by Christoph on 21 August 2009 | <a href="../../beta-v0-8-on-its-way-to-the-testers/index.html#PageComments_holder" title="View Comments Posted">5 Comments</a></p>
+	
+		<p class="tags">
+			Tags:
+			
+				<a href="beta.html" title="View all posts tagged 'beta'" rel="tag">beta</a>,
+			
+				<a href="V0.8" title="View all posts tagged 'V0.8'" rel="tag">V0.8</a>,
+			
+				<a href="release.html" title="View all posts tagged 'release'" rel="tag">release</a>
+			
+		</p>
+	
+	<p>Two good news today...</p>
+	<p class="blogVitals"><a href="../../beta-v0-8-on-its-way-to-the-testers/index.html#PageComments_holder" class="comments" title="View Comments for this post">5 comments</a> | <a href="../../beta-v0-8-on-its-way-to-the-testers/index.html" class="readmore" title="Read Full Post">Read the full post</a></p>
+</div>
+
+		
+	
+	
+	
+	<div id="PageNumbers">
+		<p>
+			
+		
+			<span>
+		    	
+					
+						1
+					
+				
+					
+						
+							<a href="release%3Fstart=10.html" title="View page number 2">2</a>
+						
+					
+				
+			</span>
+		
+			
+				<a class="next" href="release%3Fstart=10.html" title="View the next page">Next</a>
+			
+		</p>
+	</div>
+
+	
+</div>
+
+		</div>
+		
+	   <div class="clear"><!-- --></div>
+	</div>
+	<div id="Footer">
+		<div class="footerTop">
+	<!-- -->
+</div>
+<p>KeePassMobile Copyright &copy; 2010 | <a href="../../imprint.html" title="Imprint">Imprint</a> | <a href="../../contact.html" title="Contact">Contact</a> | <a href="../../donate.1.html" title="Donate">Donate</a></p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1424031-4");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</div> 
+</div>
+
+</body>
+</html>

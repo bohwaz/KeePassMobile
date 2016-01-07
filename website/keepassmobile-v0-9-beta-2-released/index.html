@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+
+  <head>
+		<base href="" />
+		<title>KeePassMobile V0.9 BETA 2 released &raquo; KeePassMobile - Mobile Password Management Software</title>
+		<meta name="generator" http-equiv="generator" content="SilverStripe 2.3.1 - http://www.silverstripe.com" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en"/>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/" xmlns:dc="http://purl.org/dc/elements/1.1/" >
+	<rdf:Description rdf:about="/keepassmobile-v0-9-beta-2-released/" trackback:ping="/keepassmobile-v0-9-beta-2-released/trackbackping" dc:identifier="/keepassmobile-v0-9-beta-2-released/" dc:title="KeePassMobile V0.9 BETA 2 released" />
+</rdf:RDF>
+
+		<link rel="shortcut icon" href="../favicon.ico" />
+		
+		 
+		 
+		 
+		
+		<!--[if IE 6]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie6.css);
+			</style> 
+		<![endif]-->
+		
+		<!--[if IE 7]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie7.css);
+			</style> 
+		<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.5.0/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+	<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/layout.css%3Fm=1247729689.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/typography.css%3Fm=1241954114.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy/css/form.css%3Fm=1241954113.css" />
+<link rel="stylesheet" type="text/css" href="../themes/blackcandy_blog/css/blog.css%3Fm=1241954120.css" />
+</head>
+<body><script type="text/javascript" src="../jsparty/prototype.js%3Fm=1241953734"></script><script type="text/javascript" src="../jsparty/behaviour.js%3Fm=1241953732"></script><script type="text/javascript" src="../jsparty/prototype_improvements.js%3Fm=1241953736"></script><script type="text/javascript" src="../sapphire/javascript/i18n.js%3Fm=1241953914"></script><script type="text/javascript" src="../sapphire/javascript/lang/en_US.js%3Fm=1241954081"></script><script type="text/javascript" src="../sapphire/javascript/Validator.js%3Fm=1241953917"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#PageCommentInterface_Form_PostCommentForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#PageCommentInterface_Form_PostCommentForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('PageCommentInterface_Form_PostCommentForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#PageCommentInterface_Form_PostCommentForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('PageCommentInterface_Form_PostCommentForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script>
+<div id="BgContainer">
+	<div id="Container">
+		<div id="Header">
+			<form id="SearchForm_SearchForm" action="http://localhost:8080/keepassmobile-v0-9-beta-2-released/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="Search" /></div></div>
+		
+		
+			<input class="action" id="SearchForm_SearchForm_action_results" type="submit" name="action_results" value="Search" title="Search" />
+		
+	</fieldset>
+</form>
+
+	   		<h1>KeePassMobile</h1>
+	    	<p>Secure Password Management On The Go!</p>
+		</div>
+		
+		<div id="Navigation">
+			<ul>
+ 		  
+  		<li><a href="../index.html" title="Go to the Home page" class="link"><span>Home</span></a></li>
+   		  
+  		<li><a href="../news/index.html" title="Go to the News page" class="section"><span>News</span></a></li>
+   		  
+  		<li><a href="../download/index.html" title="Go to the Download page" class="link"><span>Download</span></a></li>
+   		  
+  		<li><a href="../faq/index.html" title="Go to the FAQ page" class="link"><span>FAQ</span></a></li>
+   		  
+  		<li><a href="../translations/index.html" title="Go to the Translations page" class="link"><span>Translations</span></a></li>
+   		  
+  		<li><a href="../forums/index.html" title="Go to the Support page" class="link"><span>Support</span></a></li>
+   		  
+  		<li><a href="../donate/index.html" title="Go to the Donate page" class="link"><span>Donate</span></a></li>
+   	
+ </ul>
+	  	</div>
+	  	
+	  	<div class="clear"><!-- --></div>
+		
+		<div id="Layout">
+		  <!-- % include BlogSideBar % -->
+<div id="BlogContent" class="typography">
+	
+	<div id="Breadcrumbs">
+	   	<p><a href="../news/index.html">News</a> &raquo; KeePassMobile V0.9 BETA 2 released</p>
+	</div>
+
+	
+	<div class="blogEntry">
+		<h2>KeePassMobile V0.9 BETA 2 released</h2>
+		<p class="authorDate">Posted by Christoph on 7 August 2010 | 6 Comments</p>
+		
+			<p class="tags">
+				 Tags: 
+				
+					<a href="../news/tag/release.html" title="View all posts tagged 'release'" rel="tag">release</a>,
+				
+					<a href="../news/tag/beta.html" title="View all posts tagged 'beta'" rel="tag">beta</a>,
+				
+					<a href="../news/tag/V0.9" title="View all posts tagged 'V0.9'" rel="tag">V0.9</a>
+				
+			</p>
+		
+		
+			<p>Here is the second BETA release of the upcoming KeePassMobile V0.9.  This release should be quite stable by now. Anyhow, always keep a backup  of your password database elsewhere.</p>
+<p><strong><span style="color: red;">ATTENTION: THOUGH I  INVESTED MUCH TIME IN TESTING KEEPASSMOBILE, A BETA VERSION IS NEVER AS  STABLE AS THE FINAL RELEASE. THERE IS A SMALL BUT INCREASED RISK  COMPARED TO A FINAL VERSION THAT KEEPASSMOBILE BETA CORRUPTS YOUR  DATABASE. THEREFORE, ALWAYS CREATE A BACKUP OF YOUR DATABASE BEFORE  USING THE BETA VERSION OF KEEPASSMOBILE!</span></strong></p>
+<p><strong>If you download, install and test this version, please don't forget to leave a small note in the <a href="http://192.168.149.129/keepassmobile/index.php/beta-release-feedback/">forum</a> like: "Works!", "Does not start!", "Crashes, when..." with the name of your mobile.</strong></p>
+<p>There are two ways to install KeePassMobile V0.9 BETA:</p>
+<ul>
+<li>Download the archive and install KeePassMobile manually: <a href="http://localhost:8080/assets/keepassmobile/KeePassMobile-0.9-beta2.zip" target="_blank">KeePassMobile-0.9-beta2.zip</a></li>
+<li>OTA: Open the browser of your mobile phone, navigate to <a href="http://m2.keepassmobile.com/">http://m2.keepassmobile.com</a> and follow the instructions on the screen.  Cheers, Christoph</li>
+</ul>
+		
+		<br />
+	</div>
+	
+	
+	
+	
+	<div id="PageComments_holder" class="typography">
+	
+		<h4>Post your comment</h4>
+		
+		
+<form id="PageCommentInterface_Form_PostCommentForm" action="http://localhost:8080/keepassmobile-v0-9-beta-2-released/PageComments/PostCommentForm" method="post" enctype="application/x-www-form-urlencoded">
+
+	
+	<p id="PageCommentInterface_Form_PostCommentForm_error" class="message " style="display: none"></p>
+	
+	
+	<fieldset>
+		<legend></legend>
+		
+			<input class="hidden" type="hidden" id="PageCommentInterface_Form_PostCommentForm_ParentID" name="ParentID" value="47" />
+		
+			<div id="Name" class="field text "><label class="left" for="PageCommentInterface_Form_PostCommentForm_Name">Your name</label><div class="middleColumn"><input type="text" class="text" id="PageCommentInterface_Form_PostCommentForm_Name" name="Name" value="" /></div></div>
+		
+			<div id="CommenterURL" class="field text "><label class="left" for="PageCommentInterface_Form_PostCommentForm_CommenterURL">Your website URL</label><div class="middleColumn"><input type="text" class="text" id="PageCommentInterface_Form_PostCommentForm_CommenterURL" name="CommenterURL" value="" /></div></div>
+		
+			<div id="Comment" class="field textarea "><label class="left" for="PageCommentInterface_Form_PostCommentForm_Comment">Comments</label><div class="middleColumn"><textarea id="PageCommentInterface_Form_PostCommentForm_Comment" name="Comment" rows="5" cols="20"></textarea></div></div>
+		
+			<input class="hidden" type="hidden" id="PageCommentInterface_Form_PostCommentForm_SecurityID" name="SecurityID" value="350391720" />
+		
+			
+		
+		<div class="clear"><!-- --></div>
+	</fieldset>
+
+	
+	<div class="Actions">
+		
+			<input class="action" id="PageCommentInterface_Form_PostCommentForm_action_postcomment" type="submit" name="action_postcomment" value="Post" title="Post" />
+		
+	</div>
+	
+
+</form>
+
+
+	
+	
+	<h4>Comments</h4>
+	
+	<div id="CommentHolder">
+		
+			<ul id="PageComments">
+				
+					<li class="odd first  notspam">
+						<p class="comment" id="PageComment_515">
+	
+		Samsung Wave (bada)<br />open file - read - edit - save - close<br />works!	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by bossa, 15/09/2010 10:33pm (1  year ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even notspam">
+						<p class="comment" id="PageComment_514">
+	
+		Nokia 6710 Navigator: opened my database, copied &amp; pasted my password to email. Worked OK. Thanks!	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by joo, 14/09/2010 8:16pm (1  year ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="odd notspam">
+						<p class="comment" id="PageComment_513">
+	
+		Program not loading on Nokia 9300i	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Cawa, 13/09/2010 12:14am (1  year ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even notspam">
+						<p class="comment" id="PageComment_509">
+	
+		Nokia N95<br /><br />Database opens OK.<br /><br />Never tried saving &amp; checking for corruption.<br /><br />There seems a problem in displaying &amp; editing of the notes.<br /><br />At the end of the first line in many of the notes a square charac appears and in edit mode new lines are not displayed.<br /> <br />Needed to restart phone after loading beta on top of previous version.	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Peter, 10/09/2010 8:57am (1  year ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="odd notspam">
+						<p class="comment" id="PageComment_508">
+	
+		Nokia E72: Appears to work well (only tried opening &amp; navigating my database though).	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by Michael, 09/09/2010 5:26pm (1  year ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+					<li class="even last  notspam">
+						<p class="comment" id="PageComment_504">
+	
+		At first my Nokia E-90 can't open that zip format. So i can't install OTA. I have to do that with my computer and install by the "long way".<br /><br />Than: It WORKS great!<br /><br />Nice new feature "Schriftgröße".<br /><br />As in V0.8.1 the buttons on the big screen (Nokia E-90) are not on the right position to the funktion-keys. But thats not realy a problem for me.<br /><br />Thanks for the new Version!  	
+	
+</p>
+<p class="info">
+	
+		<span>Posted by <a href="http://www.skate-trainer.de">Scotty</a>, 12/08/2010 12:40am (1  year ago)</span>
+	
+
+	<br />
+	<ul class="actionLinks">
+		
+		
+		
+		
+	</ul>
+</p>
+
+					</li>
+				
+			</ul>
+			
+			
+		
+	</div>
+	<p id="CommentsRSSFeed">
+		<a class="commentrss" href="../PageComment/rss%3Fpageid=47.html">RSS feed for comments on this page</a> | 
+		<a href="../PageComment/rss.html" class="commentrss" title="View all Comments">RSS feed for all comments</a>
+	</p>
+</div>
+	
+
+</div>
+
+		</div>
+		
+	   <div class="clear"><!-- --></div>
+	</div>
+	<div id="Footer">
+		<div class="footerTop">
+	<!-- -->
+</div>
+<p>KeePassMobile Copyright &copy; 2010 | <a href="../imprint.html" title="Imprint">Imprint</a> | <a href="../contact.html" title="Contact">Contact</a> | <a href="../donate.1.html" title="Donate">Donate</a></p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1424031-4");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</div> 
+</div>
+
+</body>
+</html>

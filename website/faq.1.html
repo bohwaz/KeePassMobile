@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+
+  <head>
+		<base href="" />
+		<title>FAQ &raquo; KeePassMobile - Mobile Password Management Software</title>
+		<meta name="generator" http-equiv="generator" content="SilverStripe 2.3.1 - http://www.silverstripe.com" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" http-equiv="keywords" content="keepassmobile, keepass, mobile, password, manager, software, free, open, source, opensource" />
+<meta name="description" http-equiv="description" content="KeePassMobile is a free, open source password manager software for mobile phones, that stores passwords in a highly-encrypted database" />
+<meta http-equiv="Content-Language" content="en"/>
+
+		<link rel="shortcut icon" href="favicon.ico" />
+		
+		 
+		 
+		 
+		
+		<!--[if IE 6]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie6.css);
+			</style> 
+		<![endif]-->
+		
+		<!--[if IE 7]>
+			<style type="text/css">
+			 @import url(themes/blackcandy/css/ie7.css);
+			</style> 
+		<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.5.0/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+	<link rel="stylesheet" type="text/css" href="themes/blackcandy/css/layout.css%3Fm=1247729689.css" />
+<link rel="stylesheet" type="text/css" href="themes/blackcandy/css/typography.css%3Fm=1241954114.css" />
+<link rel="stylesheet" type="text/css" href="themes/blackcandy/css/form.css%3Fm=1241954113.css" />
+</head>
+<body><script type="text/javascript" src="jsparty/prototype.js%3Fm=1241953734"></script><script type="text/javascript" src="jsparty/behaviour.js%3Fm=1241953732"></script><script type="text/javascript" src="jsparty/prototype_improvements.js%3Fm=1241953736"></script><script type="text/javascript" src="sapphire/javascript/i18n.js%3Fm=1241953914"></script><script type="text/javascript" src="sapphire/javascript/lang/en_US.js%3Fm=1241954081"></script><script type="text/javascript" src="sapphire/javascript/Validator.js%3Fm=1241953917"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+			
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script>
+<div id="BgContainer">
+	<div id="Container">
+		<div id="Header">
+			<form id="SearchForm_SearchForm" action="http://localhost:8080/faq/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="Search" /></div></div>
+		
+		
+			<input class="action" id="SearchForm_SearchForm_action_results" type="submit" name="action_results" value="Search" title="Search" />
+		
+	</fieldset>
+</form>
+
+	   		<h1>KeePassMobile</h1>
+	    	<p>Secure Password Management On The Go!</p>
+		</div>
+		
+		<div id="Navigation">
+			<ul>
+ 		  
+  		<li><a href="index.html" title="Go to the Home page" class="link"><span>Home</span></a></li>
+   		  
+  		<li><a href="news/index.html" title="Go to the News page" class="link"><span>News</span></a></li>
+   		  
+  		<li><a href="download/index.html" title="Go to the Download page" class="link"><span>Download</span></a></li>
+   		  
+  		<li><a href="faq/index.html" title="Go to the FAQ page" class="current"><span>FAQ</span></a></li>
+   		  
+  		<li><a href="translations/index.html" title="Go to the Translations page" class="link"><span>Translations</span></a></li>
+   		  
+  		<li><a href="forums/index.html" title="Go to the Support page" class="link"><span>Support</span></a></li>
+   		  
+  		<li><a href="donate/index.html" title="Go to the Donate page" class="link"><span>Donate</span></a></li>
+   	
+ </ul>
+	  	</div>
+	  	
+	  	<div class="clear"><!-- --></div>
+		
+		<div id="Layout">
+		  <div class="typography">
+	
+			
+	
+	
+		<h2>FAQ</h2>
+	
+		<h3>General Questions</h3>
+<ol>
+<li><a href="faq.1.html#what">What is KeePassMobile?</a></li>
+<li><a href="faq.1.html#license">Which license does KeePassMobile use?</a></li>
+<li><a href="faq.1.html#standalone">Can KeePassMobile be used standalone?</a></li>
+<li><a href="faq.1.html#database">What type of KeePass database is supported?</a></li>
+<li><a href="faq.1.html#versions">What's the difference between KeePass 1.x and 2.x databases?</a></li>
+<li><a href="faq.1.html#contribute">How can I contribute?</a></li>
+</ol>
+<h3>Using KeePassMobile</h3>
+<ol>
+<li><a href="faq.1.html#edit">How to enter the database password?</a></li>
+<li><a href="faq.1.html#key_file">How to open the database using a key file?</a></li>
+<li><a href="faq.1.html#nav">How to navigate through the tree of groups/password entries?</a></li>
+<li><a href="faq.1.html#lang">How to change the user settings (language, date format,...)?</a></li>
+<li><a href="faq.1.html#attach">How to save the attachment of a password entry to your mobile?</a></li>
+<li><a href="faq.1.html#uriproblem">I created a new database and successfully saved it. But when I want to open it again the error 'Uri is not valid' appears. What is the problem?</a></li>
+</ol>
+<h3>Performance Problems</h3>
+<ol>
+<li><a href="faq.1.html#perf_ui">I can not get KeePassMobile to run on my old/low-end mobile / The UI is very slow on my phone!</a></li>
+<li><a href="faq.1.html#perf_light">What are the differences between KeePassMobile and KeePassMobile LIGHT?</a></li>
+<li><a href="faq.1.html#perf_db">The decryption process of my database takes very long!</a></li>
+<li><a href="faq.1.html#perf_rate">What is the performance of my mobile?</a></li>
+</ol>
+<h3>Security Problems</h3>
+<ol>
+<li><a href="faq.1.html#sec_ex">During some operation I get a "java.lang.SecurityException". What is the problem?</a></li>
+</ol>
+<h3>Mobile Devices</h3>
+<ol>
+<li><a href="faq.1.html#md_bb">Are BlackBerry devices supported?</a></li>
+</ol>
+<p>&nbsp;</p>
+<h2>General Questions</h2>
+<h4><a name="what"></a>What is KeePassMobile?</h4>
+<p>KeePassMobile is a port of the widely used, free, secure, award winning password manager software <a title="Go to KeePass homepage" href="http://www.keepass.info/" target="_blank">KeePass</a> for mobile phones (J2ME platform).</p>
+<h4><a name="license"></a>Which license does KeePassMobile use?</h4>
+<p>KeePassMobile is free, open source software and can be redistributed and/or modified under the terms of the GNU General Public License version 3 (GPL3).</p>
+<h4><a name="standalone"></a>Can KeePassMobile be used standalone?</h4>
+<p>Yes. KeePassMobile offers everything you need to store your passwords in a secure and <a title="Follow this link to find more KeePass ports" href="http://www.keepass.info/download.html" target="_blank">portable</a> password database on your mobile.</p>
+<h4><a name="database"></a>What type of KeePass database is supported?</h4>
+<p>KeePassMobile only supports <strong>KeePass 1.x databases</strong>. The J2ME platform, KeePassMobile is built on, is very limited due to the capabilities of mobile phones. For this reason I do not plan to support KeePass 2.x databases that have enhanced resource requirements.</p>
+<h4><a name="versions"></a>What's the difference between KeePass 1.x and 2.x databases?</h4>
+<p>&nbsp;See the differences of both versions <a title="KeePass Edition Comparison" href="http://www.keepass.info/compare.html" target="_blank">here</a>.</p>
+<h4><a name="contribute"></a>How can I contribute?</h4>
+<p>If you like KeePassMobile and want to contribute, you can help as <a href="translations/index.html">translator</a>, beta tester and/or <a title="Donate" href="donate/index.html">donator</a>. <a title="contact@keepassmobile.com" href="mailto:contact@keepassmobile.com">Please contact me</a>!</p>
+<p>&nbsp;</p>
+<h2>Using KeePassMobile</h2>
+<h4><a name="edit"></a>How to enter the database master password?</h4>
+<p>Select the password field and press ENTER (center cursor button) once, to enter the edit mode of the underlying text field.</p>
+<h4><a name="key_file"></a>How to open the database using a key file?</h4>
+<p>If your database is password AND key file encrypted, first enter the password (see above) else leave the password field blank. On the same screen open the menu, choose "Use key file" and navigate to the key file on your mobile. Select the key file with ENTER.</p>
+<h4><a name="nav"></a>How to navigate through the tree of group/password entries?</h4>
+<p>Click UP/DOWN to navigate through the list of groups/entries. Click RIGHT/ENTER to go down the tree of groups. Click LEFT to go up the tree of groups.</p>
+<h4><a name="lang"></a>How to change the user settings (language, date format, ...)?</h4>
+<p>Open the menu on the start screen and choose 'Preferences'. Change the settings to your needs. Now, open the menu and press 'Save'. Restart KeePassMobile to activate the changes.</p>
+<h4><a name="attach"></a>How to save the attachment of a password entry to your mobile?</h4>
+<p>Open the password entry with the attachment. Open the menu, choose "Save attachment" and navigate to the folder on your mobile where you want to save the attachment into. Select the folder with ENTER.</p>
+<h4><a name="uriproblem"></a>I created a new database and successfully saved it. But when I want to open it again the error 'Uri is not valid' appears. What is the problem?</h4>
+<p>This problem occures, if the database or path name consists of one or more special characters (for example russian, asian,... characters). Try to use only <a href="http://en.wikipedia.org/wiki/English_alphabet" target="_blank">English Alphabet</a> characters for the database and path name. After that, the error should disapear.</p>
+<p>&nbsp;</p>
+<h2>Performance Problems</h2>
+<h4><a name="perf_ui"></a>I can not get KeePassMobile to run on my old/low-end mobile / The UI is very slow on my phone!</h4>
+<p>KeePassMobile has greater hardware requirements than other Java mobile apps. Those are the costs of having a nice UI. But even on my four year old Nokia S40 device KeePassMobile works like a charm. If you have problems getting the standard package of KeePassMobile to run on your mobile, try the LIGHT version of KeePassMobile. <strong>KeePassMobile LIGHT</strong> was specially created for old/low-end mobiles and can be downloaded <a href="download/index.html#light">here</a>.</p>
+<h4><a name="perf_light"></a>What are the differences between KeePassMobile and KeePassMobile LIGHT?</h4>
+<ul>
+<li> KeePassMobile LIGHT includes all features of the KeePassMobile standard package</li>
+<li>KeePassMobile LIGHT includes only two languages (English and German)</li>
+<li>KeePassMobile LIGHT includes only the 'FAST' theme (that has no background image, transparency, animation, ...)</li>
+<li>KeePassMobile LIGHT includes some minor resource improvements</li>
+</ul>
+<h4><a name="perf_db"></a>The decryption process of my database takes very long!</h4>
+<p>Even small databases can take long to decrypt on some phones. This is because the master password itself is encrypted very often before it is used to decrypt the database. This is a security feature of the KeePass database and protects against dictionary and guessing attacks (see <a title="Security features of KeePass" href="http://www.keepass.info/features.html#lnksec" target="_blank">here</a> for more information).</p>
+<p>KeePass for PC sets the number of key encryption rounds to 6000 by default. For a PC this is OK, but for a phone with its limited capacities this can be too much. Lower this number to 150-300 will not reduce the security very much, but will speed up the decryption process a lot. To do this, open your database with KeePassMobile and choose "Edit database settings" from the menu. Change the number of key encryption rounds in the settings dialog and save the database afterwards. The next time, loading your database should be much faster.</p>
+<h4><a name="perf_rate"></a>What is the performance of my mobile?</h4>
+<p>Starting with V0.6, KeePassMobile prints out some performance statistics about your mobile regarding the decryption process. At the end of the report KeePassMobile prints out a "performance rating" value. All the different disciplines of the decryption process are computed into this value. It is not intended to provide 100% fair performance benchmarking, but can be used to make a rough estimate of the performance of your mobile.</p>
+<p>For comparison: A mobile that can process 1000bytecodes/ms: performance rating = 100</p>
+<p>Please leave a note in the <a href="performance-ratings/index.html">forums</a> about the performance of your mobile.</p>
+<p>&nbsp;</p>
+<h2>Security Problems</h2>
+<h4><a name="sec_ex"></a>During some operation I get a "java.lang.SecurityException". What is the problem?</h4>
+<p>KeePassMobile needs access rights to read/write data from/to phone memory, sd card,... How this access rights can be achieved differs from mobile to mobile: Some mobiles pop up a dialog asking the user for permission every time, others simply stop executing KeePassMobile with a "java.lang.SecurityException".</p>
+<p>The key problem is, that KeePassMobile is not signed and therefore the phone handles it as untrusted application. There are two solutions for this, that have both significant drawbacks:</p>
+<ul>
+<li>Self-signing: self signing only works for phones that allow to import new certificates. Unfortunately, only very few phones do allow this, because signing is a very lucrative business :-|</li>
+<li>Buy a certificate from a certificate authority: It would cost me several hundred dollars (every year) to sign KeePassMobile from a certificate authority (and even then it is not guaranteed, to work on all phones). Too much for a hobby project, sorry!</li>
+</ul>
+<p>There are two interesting articles about this dilemma:</p>
+<p><a href="http://javablog.co.uk/2007/08/09/how-midlet-signing-is-killing-j2me/" target="_blank">http://javablog.co.uk/2007/08/09/how-midlet-signing-is-killing-j2me/</a><br /><a href="http://blog.javia.org/midlet-signing/" target="_blank">http://blog.javia.org/midlet-signing/</a></p>
+<p>If someone sees another solution, please post in the forums!</p>
+<p>&nbsp;</p>
+<h2>Mobile Devices</h2>
+<h4><a name="md_bb"></a>Are BlackBerry devices supported?</h4>
+<p>Yes. At the moment (V0.8) KeePassMobile is a bit slow and do not comply with BlackBerry standards: because BlackBerry phones lack of soft-menu buttons you have to use the <strong>Q</strong> key for the left menu and the <strong>P</strong> key for the right menu. Anything else works as expected (including trackball to navigate through the password groups/entries tree). I will try to make KeePassMobile V0.9 fully BlackBerry compatible.</p>
+		
+		
+	
+</div>
+
+	
+	
+	
+		</div>
+		
+	   <div class="clear"><!-- --></div>
+	</div>
+	<div id="Footer">
+		<div class="footerTop">
+	<!-- -->
+</div>
+<p>KeePassMobile Copyright &copy; 2010 | <a href="imprint.html" title="Imprint">Imprint</a> | <a href="contact.html" title="Contact">Contact</a> | <a href="donate.1.html" title="Donate">Donate</a></p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1424031-4");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</div> 
+</div>
+
+</body>
+</html>
