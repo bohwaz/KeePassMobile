@@ -4,6 +4,8 @@ Secure password manager for phones (J2ME/Symbian/BlackBerry) compatible with Kee
 
 This program was authored by Christoph, and development ceased in december 2011. License: GNU GPL.
 
+The original website is archived here for historic purposes: https://bohwaz.github.io/KeePassMobile/website/
+
 The following text is from the now-defunct KeepassMobile.com website:
 
 ## What is KeePassMobile?
